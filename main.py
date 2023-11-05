@@ -32,7 +32,7 @@ remove_duplicates(color_list)
 for element in color_list:
     color_dict = dict.fromkeys(color_list, len(element))
     print(len(element))
-
+# Bug in this for loop. The print statement on line 34 produces the desired output. But using the same len(element) on line 33 does not give me the desired result in the color_dict variable.
 print(color_dict)
 
 
