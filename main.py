@@ -45,23 +45,23 @@ remove_duplicates(color_list)
 
 # print(remove_duplicates(color_list))
 
+
+len_list_color_list = []
 for element in color_list:
-    color_dict = dict.fromkeys(color_list, len(element))
-    print(len(element))
-# Bug in this for loop. The print statement on line 34 produces the desired output. But using the same len(element) on line 33 does not give me the desired result in the color_dict variable.
+        len_list_color_list.append(len(element))
+print(len_list_color_list)
+
+color_dict = dict(zip(color_list, len_list_color_list))
 print(color_dict)
 
+# with open("./color_dict.json", "w") as json_file:
+#     json.dump(color_dict, json_file)
 
+# print("json done")
 
+# with open("./color_dict.json", "r") as json_file:
+#     new_color_dict = json.load(json_file)
 
-with open("./color_dict.json", "w") as json_file:
-    json.dump(color_dict, json_file)
-
-print("json done")
-
-with open("./color_dict.json", "r") as json_file:
-    new_color_dict = json.load(json_file)
-
-print(new_color_dict)
+# print(new_color_dict)
 
 
