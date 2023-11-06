@@ -49,16 +49,16 @@ for element in color_list:
 
 
 color_dict = dict(zip(color_list, len_list_color_list))
-print(color_dict)
+
 
 with open("./color_dict.json", "w") as json_file:
     json.dump(color_dict, json_file)
 
-print("json done")
+
 
 with open("./color_dict.json", "r") as json_file:
     new_color_dict = json.load(json_file)
 
-print(new_color_dict)
+
 
 
